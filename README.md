@@ -25,9 +25,11 @@ python -m contamguard_st.cli claim-status
 
 Commands emit JSON to stdout. Gate commands also write uniform contract outputs under `results/<project>/` via the vendored `results_contract.py`.
 
-## Validation marker
+## Evidence-derived status
 
-`python -m contamguard_st.cli claim-status` reads the committed package marker in `src/contamguard_st/validation.py` and prints `validated`. It does not require private governance documents to be present.
+`python -m contamguard_st.cli claim-status` reads `evidence/summary.json`, derives the public claim label from the visible evidence and stated validation bar, and currently prints `preliminary` plus the missing-evidence list. It does not rely on private governance documents or a hardcoded validation constant.
+
+The current public-safe scope is preliminary: the multi-seed planted-spillover effect is robust but synthetic/modest, and the external SPLIT-style same-card baseline has not been run.
 
 ## Citations and references
 

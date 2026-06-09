@@ -1,0 +1,58 @@
+{
+  "caveats": [
+    "The effect is synthetic and modest; no external SPLIT run or true contamination benchmark is included."
+  ],
+  "claim_gate_evidence": {
+    "ablation": true,
+    "baseline_comparison": true,
+    "failure_modes": true,
+    "license_review": true,
+    "public_data_smoke": true
+  },
+  "claim_scope": "Preliminary robust-modest evidence: multi-seed planted spillover recovery beats a naive negative-control fraction on a synthetic injection benchmark.",
+  "metrics": {
+    "mae_reduction_ci_high": 0.049332,
+    "mae_reduction_ci_low": 0.046549,
+    "mae_reduction_mean": 0.04794,
+    "pearson_gain_ci_high": 0.041904,
+    "pearson_gain_ci_low": 0.031703,
+    "pearson_gain_mean": 0.036804,
+    "positive_seed_fraction": 1.0,
+    "sampled_cell_count": 5000,
+    "seed_count": 20,
+    "spearman_gain_ci_high": 0.062388,
+    "spearman_gain_ci_low": 0.052265,
+    "spearman_gain_mean": 0.057327
+  },
+  "missing_evidence": [
+    "same_card_split_run",
+    "true_contamination_benchmark",
+    "external_transfer_evidence"
+  ],
+  "project": "contamguard-st",
+  "provenance": [
+    {
+      "name": "local planted-alpha recovery",
+      "status": "RAN"
+    },
+    {
+      "name": "naive negative-control fraction",
+      "status": "RAN"
+    },
+    {
+      "name": "SPLIT",
+      "note": "same-card R environment not run",
+      "status": "REFERENCE_REPORTED"
+    }
+  ],
+  "schema_version": 1,
+  "validation_bar": {
+    "met": false,
+    "required_for_validated": [
+      "same-card SPLIT or other external contamination baseline run in an isolated environment",
+      "true contamination benchmark beyond synthetic planted-alpha injection",
+      "public visible evidence that the modest synthetic effect transfers to external data"
+    ]
+  },
+  "visible_claim_label": "preliminary"
+}
